@@ -1,10 +1,33 @@
 import HomeScreen from "./screens/HomeScreen";
-
+import GlobalStyle from "./components/GlobalStyle";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Cart } from "./screens/Cart";
+import SellPage from "./screens/SellPage";
+// import { CategoriesScreen } from "./screens/CategoriesScreen";
+import VitaminPage from "./components/subCategories/VitaminPage";
+import SyringePage from "./components/subCategories/SyringePage";
+import InstrumentPage from "./components/subCategories/InstrumentPage";
+import TabletsPage from "./components/subCategories/TabletsPage";
+import LogIn from "./screens/Login";
+import SignUp from "./screens/SignUp";
 
 function App() {
   return (
     <div className="App">
-      <HomeScreen/>      
+      <GlobalStyle />
+
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/sell" element={<SellPage />} />
+        {/* <Route path="/categories/" element={<CategoriesScreen />} /> */}
+        <Route path="/medicine" element={<TabletsPage />} />
+        <Route path="/vitamin" element={<VitaminPage />} />
+        <Route path="/syringe" element={<SyringePage />} />
+        <Route path="/instrument" element={<InstrumentPage />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+      </Routes>
     </div>
   );
 }

@@ -1,16 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import './index.css';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
-  <MuiThemeProvider>
-  <App />
-  </MuiThemeProvider>
+    <BrowserRouter>
+      <MuiThemeProvider>
+        <App />
+      </MuiThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

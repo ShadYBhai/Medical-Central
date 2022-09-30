@@ -7,35 +7,18 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-import { useNavigate } from "react-router-dom";
-
-const Categories = () => {
-  const navigate = useNavigate();
-
-  const navigateMedicine = () => {
-    navigate("/medicine");
-  };
-  const navigateSyringe = () => {
-    navigate("/syringe");
-  };
-  const navigateVitamin = () => {
-    navigate("/vitamin");
-  };
-  const navigateInstrument = () => {
-    navigate("/instrument");
-  };
-
+const ShopByProduct = () => {
   return (
-    <Catg>
-      <h1>CATEGORIES</h1>
+    <ShopProduct>
+      <h1>PRODUCTS</h1>
       <Grid container spacing={2}>
         <Grid item xs={3}>
-          <Card sx={{ maxWidth: 345 }} onClick={navigateMedicine}>
+          <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Tablets
+                  Medicines
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Lizards are a widespread group of squamate reptiles, with over
@@ -47,7 +30,7 @@ const Categories = () => {
         </Grid>
 
         <Grid item xs={3}>
-          <Card sx={{ maxWidth: 345 }} onClick={navigateSyringe}>
+          <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia />
               <CardContent>
@@ -63,7 +46,7 @@ const Categories = () => {
           </Card>
         </Grid>
         <Grid item xs={3}>
-          <Card sx={{ maxWidth: 345 }} onClick={navigateVitamin}>
+          <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia />
               <CardContent>
@@ -79,7 +62,7 @@ const Categories = () => {
           </Card>
         </Grid>
         <Grid item xs={3}>
-          <Card sx={{ maxWidth: 345 }} onClick={navigateInstrument}>
+          <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia />
               <CardContent>
@@ -95,19 +78,15 @@ const Categories = () => {
           </Card>
         </Grid>
       </Grid>
-    </Catg>
+    </ShopProduct>
   );
 };
-const Item = styled.div`
-  background-color: yellow;
-  height: 4rem;
-  width: 5rem;
-`;
 
-const Catg = styled.div`
-  margin-top: 4rem;
+const ShopProduct = styled.div`
+  margin-top: 5rem;
   h1 {
     margin-bottom: 2rem;
   }
 `;
-export default Categories;
+
+export default ShopByProduct;
