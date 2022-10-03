@@ -6,6 +6,7 @@ const VitaminPage = () => {
     <>
       <Navbar />
       <h1>Vitamin Page</h1>
+      <h1>Vitamin D</h1>
     </>
   );
 };

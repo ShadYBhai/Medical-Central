@@ -6,6 +6,7 @@ const SyringePage = () => {
     <>
       <Navbar />
       <h1>Syringe</h1>
+      <h2>Syringe.....</h2>
     </>
   );
 };
