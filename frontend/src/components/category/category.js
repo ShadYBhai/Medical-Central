@@ -8,9 +8,9 @@ import {
   CardActionArea,
 } from "@mui/material";
 
-const category = ({ navigateMedicine, Name }) => {
+const category = ({ Name }) => {
   return (
-    <Card sx={{ maxWidth: 345 }} onClick={navigateMedicine}>
+    <Card sx={{ maxWidth: "25vw" }}>
       <CardActionArea>
         <CardMedia />
         <CardContent>
