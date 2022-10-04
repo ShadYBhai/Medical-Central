@@ -5,15 +5,19 @@ import reportWebVitals from "./reportWebVitals";
 // import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorB";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <MuiThemeProvider> */}
-      <App />
-      {/* </MuiThemeProvider> */}
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        {/* <MuiThemeProvider> */}
+        <App />
+
+        {/* </MuiThemeProvider> */}
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>
 );
 

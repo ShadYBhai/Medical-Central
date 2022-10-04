@@ -8,7 +8,7 @@ import {
   CardActionArea,
 } from "@mui/material";
 
-const category = ({ Name }) => {
+const Category = ({ Name }) => {
   return (
     <Card sx={{ maxWidth: "25vw" }}>
       <CardActionArea>
@@ -24,4 +24,4 @@ const category = ({ Name }) => {
   );
 };
 
-export default category;
+export default Category;

@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import Navbar from "./../components/Navbar";
 
 function Copyright(props) {
   return (
@@ -44,7 +45,8 @@ const SignUp = () => {
   };
 
   return (
-    <SignUp>
+    <>
+      <Navbar />
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
@@ -139,7 +141,7 @@ const SignUp = () => {
           <Copyright sx={{ mt: 5 }} />
         </Container>
       </ThemeProvider>
-    </SignUp>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { fade, photoAnim } from "../Animation";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -23,9 +24,12 @@ const Header = () => {
         </h2>
       </Head>
       <Buttons>
-        <motion.button variants={fade} className="b1">
-          BUY
-        </motion.button>
+        <Link to="/categories">
+          <motion.button variants={fade} className="b1">
+            BUY
+          </motion.button>
+        </Link>
+
         <motion.button
           onClick={navigateSell}
           variants={fade}

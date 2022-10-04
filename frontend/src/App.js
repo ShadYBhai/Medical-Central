@@ -10,6 +10,7 @@ import InstrumentPage from "./components/subCategories/InstrumentPage";
 import TabletsPage from "./components/subCategories/TabletsPage";
 import LogIn from "./screens/Login";
 import SignUp from "./screens/SignUp";
+import CategoriesScreen from "./components/CategoriesScreen";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
         <Route path="/instrument" element={<InstrumentPage />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/categories" element={<CategoriesScreen />} />
       </Routes>
+      {/* <Footer /> */}
     </div>
   );
 }
