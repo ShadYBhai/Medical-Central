@@ -47,7 +47,8 @@ const Container = styled.div`
   height: 7.2rem;
   /* background-color: #57d0d0; */
   /* background: #a5d8dd; */
-  background-color: black;
+  background: #a3d9ab;
+  /* background-color: black; */
 `;
 const Wrapper = styled.div`
   padding: 1rem 2rem;

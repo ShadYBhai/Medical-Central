@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background: #1a1a1a; 
+     background: #BFFFC9;
         font-family: 'Inter',sans-serif;
         overflow-x: hidden;
     }

@@ -1,39 +1,11 @@
 import React from "react";
-import {
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  CardActionArea,
-} from "@mui/material";
+import { Grid } from "@mui/material";
 import styled from "styled-components";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Category from "./Category/Category";
-// import Footer from "./components/Footer";
+import Navbar from "./Navbar";
 
-const Categories = () => {
-  const navigate = useNavigate();
-
-  // const navigateMedicine = (str) => {
-  //   navigate("/medicine");
-  // };
-  // const navigateSyringe = () => {
-  //   navigate("/syringe");
-  // };
-  // const navigateVitamin = () => {
-  //   navigate("/vitamin");
-  // };
-  // const navigateInstrument = () => {
-  //   navigate("/instrument");
-  // };
-
-  // const CategoryName = [
-  //   "Tablets",
-  //   "Syringe",
-  //   "Vitamins & Supplements",
-  //   "Surgical Instrument",
-  // ];
+const CategoriesScreen = () => {
   const CategoryName = [
     {
       name: "Tablets",
@@ -55,6 +27,7 @@ const Categories = () => {
 
   return (
     <>
+      <Navbar />
       <Catg>
         <h1>CATEGORIES</h1>
         <Grid container spacing={2}>
@@ -72,7 +45,6 @@ const Categories = () => {
     </>
   );
 };
-
 const Catg = styled.div`
   margin-top: 4rem;
   h1 {
@@ -80,4 +52,4 @@ const Catg = styled.div`
     color: white;
   }
 `;
-export default Categories;
+export default CategoriesScreen;
