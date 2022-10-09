@@ -22,7 +22,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mc.com/">
+      <Link color="inherit" to="/">
         medical central
       </Link>{" "}
       {new Date().getFullYear()}
@@ -36,7 +36,7 @@ const theme = createTheme();
 const SignUp = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const data = new FormData(event.target);
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -131,7 +131,7 @@ const SignUp = () => {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link href="login">Already have an account? Sign in</Link>
+                  <Link to="login">Already have an account? Sign in</Link>
                 </Grid>
               </Grid>
             </Box>

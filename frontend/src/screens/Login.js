@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Navbar from "../components/Navbar";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -23,9 +23,9 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <NavLink color="inherit" href="https://mc.com/">
+      <Link color="inherit" href="https://mc.com/">
         medical central
-      </NavLink>{" "}
+      </Link>{" "}
       {new Date().getFullYear()}
       {"."}
     </Typography>
@@ -104,12 +104,12 @@ export default function SignIn() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <NavLink>Forgot password?</NavLink>
+                  <Link>Forgot password?</Link>
                 </Grid>
                 <Grid item>
-                  <NavLink to="/signUp">
+                  <Link to="/signUp">
                     {"Don't have an account? Sign Up"}
-                  </NavLink>
+                  </Link>
                 </Grid>
               </Grid>
             </Box>
