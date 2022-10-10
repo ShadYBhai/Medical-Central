@@ -9,7 +9,6 @@ import {
   Typography,
   Container,
 } from "@mui/material";
-import "../../zero.css";
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Copyright from "../components/Tiny_Components/Copyright";
@@ -18,7 +17,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme();
 
-class Sell extends Component {
+class SellPage extends Component {
   state = {
     element: "",
     date: "",
@@ -130,4 +129,4 @@ class Sell extends Component {
   }
 }
 
-export default Sell;
+export default SellPage;

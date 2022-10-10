@@ -1,6 +1,6 @@
 import HomeScreen from "./screens/HomeScreen";
 import GlobalStyle from "./components/GlobalStyle";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Cart } from "./screens/Cart";
 import SellPage from "./screens/SellPage";
 // import { CategoriesScreen } from "./screens/CategoriesScreen";
@@ -11,6 +11,7 @@ import TabletsPage from "./components/subCategories/TabletsPage";
 import LogIn from "./screens/Login";
 import SignUp from "./screens/SignUp";
 import CategoriesScreen from "./components/CategoriesScreen";
+import ProductDetails from "./screens/ProductDetails";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/categories" element={<CategoriesScreen />} />
+        <Route path="/productDetail" element={<ProductDetails />} />
       </Routes>
       {/* <Footer /> */}
     </div>
