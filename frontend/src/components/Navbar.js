@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+// import Logo from "../images/Medical Central Logo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();

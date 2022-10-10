@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const ProductDetails = () => {
-  return <div>ProductDetails</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
   //ADD TO WISHLIST FUNC
   //CART ture or false
 };

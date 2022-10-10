@@ -4,24 +4,29 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Category from "./Category/Category";
 import Navbar from "./Navbar";
+import InstrumentImg from "../images/Surgical Instrument.jpg";
 
 const CategoriesScreen = () => {
   const CategoryName = [
     {
       name: "Tablets",
       route: "/medicine",
+      Image: InstrumentImg,
     },
     {
       name: "Syringe",
       route: "/syringe",
+      Image: InstrumentImg,
     },
     {
       name: "Vitamins & Supplements",
       route: "/vitamin",
+      Image: InstrumentImg,
     },
     {
       name: "Surgical Instrument",
       route: "/instrument",
+      Image: InstrumentImg,
     },
   ];
 
@@ -35,7 +40,7 @@ const CategoriesScreen = () => {
             return (
               <Grid item xs={3}>
                 <Link to={element.route}>
-                  <Category Name={element.name} />
+                  <Category Name={element.name} Image={InstrumentImg} />
                 </Link>
               </Grid>
             );
