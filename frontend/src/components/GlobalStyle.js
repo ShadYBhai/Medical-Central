@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-     background: #BFFFC9;
+        background: #363636; 
         font-family: 'Inter',sans-serif;
         overflow-x: hidden;
     }
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.1rem;
         cursor: pointer;
         padding:1rem 2rem ;
-        border: 3px solid #ff5500;
+        border: 2px solid #ff5500;
         background: transparent;
         color: #010101;
         transition: all 0.5s ease;

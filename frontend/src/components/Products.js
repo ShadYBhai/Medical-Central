@@ -1,29 +1,33 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  CardActionArea,
-} from "@mui/material";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import styled from "styled-components";
 
-const Products = ({ Name }) => {
+const Products = ({ Name, Price }) => {
   return (
-    <div>
-      {" "}
+    <ProductCard>
       <Card sx={{ maxWidth: "25vw" }}>
-        <CardActionArea>
-          <CardMedia />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {Name}
-            </Typography>
-            <Typography variant="body2" color="text.secondary"></Typography>
-          </CardContent>
-        </CardActionArea>
+        <CardMedia />
+        <CardContent>
+          <Typography variant="h6">{Name}</Typography>
+          {Price}
+          <br />1 Day Delivery
+          <br />
+          <AddToCart>Add To Cart</AddToCart>
+          <Typography variant="body2"></Typography>
+        </CardContent>
       </Card>
-    </div>
+    </ProductCard>
   );
 };
+const ProductCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+const AddToCart = styled.button`
+  display: flex;
+  align-items: center;
+  max-height: 1rem;
+`;
 
 export default Products;

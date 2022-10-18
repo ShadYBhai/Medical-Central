@@ -47,7 +47,6 @@ const Medicine = () => {
 
   return (
     <>
-      <Navbar />
       <Tablets>
         <h1>Tablets</h1>
         <Grid container spacing={2}>
@@ -55,27 +54,26 @@ const Medicine = () => {
             return (
               <Grid item xs={3}>
                 <Card sx={{ maxWidth: 200 }}>
-                  <CardActionArea>
-                    <CardMedia />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        {el.name}
-                        <div>
-                          <img
-                            style={{
-                              maxWidth: "100%",
-                            }}
-                            src={el.image}
-                            alt=""
-                          />
-                        </div>
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                      ></Typography>
-                    </CardContent>
-                  </CardActionArea>
+                  <CardMedia />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {el.name}
+                      <div>
+                        <img
+                          style={{
+                            maxWidth: "100%",
+                          }}
+                          src={el.image}
+                          alt=""
+                        />
+                      </div>
+                      <AddToCart>Add To Cart</AddToCart>
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                    ></Typography>
+                  </CardContent>
                 </Card>
               </Grid>
             );
@@ -85,7 +83,7 @@ const Medicine = () => {
     </>
   );
 };
-
+const AddToCart = styled.button``;
 export default Medicine;
 
 const Tablets = styled.div`

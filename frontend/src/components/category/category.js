@@ -11,31 +11,28 @@ import {
 
 const Category = ({ Name, Image }) => {
   return (
-    <Card sx={{ maxWidth: "25vw" }}>
-      <CardActionArea>
-        <CardMedia />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {Name}
-          </Typography>
-          <div>
-            <img
-              style={{
-                maxWidth: "100%",
-              }}
-              src={InstrumentImg}
-              srcSet={InstrumentImg}
-              alt={Name}
-            />
-          </div>
-          <Typography variant="body2" color="text.secondary"></Typography>
-        </CardContent>
-      </CardActionArea>
+    <Card sx={{ width: "20vw", height: "35vh" }}>
+      <CardMedia />
+      <CardContent>
+        <Typography variant="h6" component="div">
+          {Name}
+        </Typography>
+        <div>
+          <img
+            style={{
+              maxWidth: "40%",
+            }}
+            src={InstrumentImg}
+            srcSet={InstrumentImg}
+            alt={Name}
+          />
+        </div>
+      </CardContent>
     </Card>
   );
 };
 
-// const Image = styled.div`
+//   const Image = styled.div`
 //   height: 50%;
 // `;
 

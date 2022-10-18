@@ -9,22 +9,42 @@ const ShopByProduct = (Name) => {
     {
       name: "Soranib Tablet 30'S",
       route: "/cancer",
+      price: 800,
     },
     {
       name: "TYLIDYS Tablet 30's",
       route: "/cancer",
+      price: 600,
     },
     {
       name: "REGONAT Tablet 28's",
       route: "/cancer",
+      price: 1000,
     },
     {
       name: "Pankajakasthuri Orthoherb Tablet 60's",
       route: "/cancer",
+      price: 800,
     },
     {
       name: "REGONAT Tablet 28's",
       route: "/cancer",
+      price: 1200,
+    },
+    {
+      name: "REGONAT Tablet 28's",
+      route: "/cancer",
+      price: 1100,
+    },
+    {
+      name: "REGONAT Tablet 28's",
+      route: "/cancer",
+      price: 500,
+    },
+    {
+      name: "REGONAT Tablet 28's",
+      route: "/cancer",
+      price: 400,
     },
   ];
   return (
@@ -35,7 +55,7 @@ const ShopByProduct = (Name) => {
           return (
             <Grid item xs={3}>
               <Link to={element.route}>
-                <Products Name={element.name} />
+                <Products Name={element.name} Price={element.price} />
               </Link>
             </Grid>
           );

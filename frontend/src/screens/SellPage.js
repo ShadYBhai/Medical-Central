@@ -1,76 +1,128 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import styled from "styled-components";
+import React, { Component } from "react";
+import {
+  Button,
+  CssBaseline,
+  TextField,
+  Link,
+  Grid,
+  Box,
+  Typography,
+  Container,
+} from "@mui/material";
+import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import Copyright from "../components/Tiny_Components/Copyright";
+import Dropdown from "../components/Tiny_Components/Dropdown";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const SellPage = () => {
-  return (
-    <>
-      <Navbar />
-      <Input>
-        <label>
-          Medicine Name <br />
-          <input type="text" />
-        </label>
+const theme = createTheme();
 
-        <label>
-          Quantity <br />
-          <input type="text" />
-        </label>
+class SellPage extends Component {
+  state = {
+    element: "",
+    date: "",
+  };
 
-        <label>
-          Expiry Date <br />
-          <input type="text" />
-        </label>
+  handleUnitChange = (event) => {
+    this.setState({ element: event.target.value });
+  };
 
-        <label>
-          Description <br />
-          <textarea
-            className=".queries"
-            rows="5"
-            cols="60"
-            name="description"
-            placeholder="Any details You would like to tell us ?"
-          ></textarea>
-        </label>
-        <button className="btn" type="submit">
-          SELL
-        </button>
-      </Input>
-    </>
-  );
-};
+  handleDateChange = (newDate) => {
+    this.setState({ date: newDate });
+  };
 
-const Input = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4rem;
+  render() {
+    const units = ["Pack", "Count"];
+    const { element, date } = this.state;
 
-  label {
-    text-transform: uppercase;
-    font-weight: bold;
+    return (
+      <ThemeProvider theme={theme}>
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <Box
+            sx={{
+              marginTop: 8,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Typography component="h1" variant="h5">
+              Sell
+            </Typography>
+            <Box
+              component="form"
+              noValidate
+              // onSubmit={handleSubmit}
+              sx={{ mt: 3 }}
+            >
+              <Grid container spacing={2}>
+                <Grid item xs={12}>
+                  <TextField
+                    autoComplete="given-medicine-name"
+                    name="medicineName"
+                    required
+                    fullWidth
+                    id="medicineName"
+                    label="Medicine Name"
+                    autoFocus
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="quantity"
+                    label="Quantity"
+                    name="quantity"
+                    autoComplete="quantity-entered"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <Dropdown
+                    onElementChange={this.handleElementChange}
+                    value={element}
+                    elements={units}
+                    label="Units *"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <DatePicker
+                      label="Expiry Date *"
+                      inputFormat="MM-YYYY"
+                      views={["month", "year"]}
+                      value={date}
+                      onChange={() => this.handleDateChange}
+                      renderInput={(params) => (
+                        <TextField {...params} fullWidth />
+                      )}
+                    />
+                  </LocalizationProvider>
+                </Grid>
+              </Grid>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sell
+              </Button>
+              <Grid container justifyContent="flex-end">
+                <Grid item>
+                  <Link href="/" variant="body2">
+                    Back to Products
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+          <Copyright sx={{ mt: 5 }} />
+        </Container>
+      </ThemeProvider>
+    );
   }
-  input {
-    text-decoration: none;
-    border: none;
-    border-radius: 2rem;
-    margin-bottom: 3rem;
-    /* display: flex; */
-    height: 3rem;
-    width: 50rem;
-    align-items: center;
-  }
-  textarea {
-    text-decoration: none;
-    border: none;
-    border-radius: 2rem;
-    margin-bottom: 3rem;
-    margin-right: 12rem;
-  }
-
-  button {
-    width: 20rem;
-  }
-`;
+}
 
 export default SellPage;

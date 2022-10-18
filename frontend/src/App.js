@@ -12,12 +12,14 @@ import LogIn from "./screens/Login";
 import SignUp from "./screens/SignUp";
 import CategoriesScreen from "./components/CategoriesScreen";
 import ProductDetails from "./screens/ProductDetails";
+import Navbar from "./components/Navbar";
+import Conformation from "./screens/Conformation";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/cart" element={<Cart />} />
@@ -31,6 +33,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/categories" element={<CategoriesScreen />} />
         <Route path="/productDetail" element={<ProductDetails />} />
+        <Route path="/confirmation" element={<Conformation />} />
       </Routes>
       {/* <Footer /> */}
     </div>

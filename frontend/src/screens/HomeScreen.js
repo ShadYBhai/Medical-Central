@@ -7,8 +7,6 @@ import styled from "styled-components";
 const HomeScreen = () => {
   return (
     <div>
-      {/* <Announcement/> */}
-      <Navbar />
       <Header />
       <Categories />
       <Div>

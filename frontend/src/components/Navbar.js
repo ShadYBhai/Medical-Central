@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-// import Logo from "../images/Medical Central Logo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -22,11 +21,28 @@ const Navbar = () => {
         <Left onClick={navigateHome}>
           MEDICAL<span>CENTRAL</span>
         </Left>
+
         <Input>
           <input type="text" placeholder="Search.." />
         </Input>
-        <Center onClick={navigateCart}>Cart</Center>
-        <Right onClick={goLogin}>SignUp|LogIn</Right>
+        <Center onClick={navigateCart}>
+          <i
+            style={{
+              cursor: "pointer",
+              fontSize: "large",
+            }}
+            class="fa-solid fa-cart-plus"
+          ></i>
+        </Center>
+        <Right onClick={goLogin}>
+          <i
+            style={{
+              cursor: "pointer",
+              fontSize: "large",
+            }}
+            class="fa-solid fa-user"
+          ></i>
+        </Right>
       </Wrapper>
     </Container>
   );
@@ -48,8 +64,8 @@ const Container = styled.div`
   height: 7.2rem;
   /* background-color: #57d0d0; */
   /* background: #a5d8dd; */
-  background: #a3d9ab;
-  /* background-color: black; */
+  /* background: #a3d9ab; */
+  background-color: black;
 `;
 const Wrapper = styled.div`
   padding: 1rem 2rem;

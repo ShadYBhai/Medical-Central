@@ -32,7 +32,6 @@ const CategoriesScreen = () => {
 
   return (
     <>
-      <Navbar />
       <Catg>
         <h1>CATEGORIES</h1>
         <Grid container spacing={2}>

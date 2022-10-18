@@ -2,11 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 
 const ProductDetails = () => {
-  return (
-    <>
-      <Navbar />
-    </>
-  );
+  return <></>;
   //ADD TO WISHLIST FUNC
   //CART ture or false
 };

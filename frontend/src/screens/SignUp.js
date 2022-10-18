@@ -46,7 +46,6 @@ const SignUp = () => {
 
   return (
     <>
-      <Navbar />
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="xs">
           <CssBaseline />
@@ -58,10 +57,6 @@ const SignUp = () => {
               alignItems: "center",
             }}
           >
-            <Typography component="h1" variant="h4">
-              LOGO
-            </Typography>
-
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
@@ -133,7 +128,7 @@ const SignUp = () => {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link to="login">Already have an account? Sign in</Link>
+                  <Link to="/login">Already have an account? Sign in</Link>
                 </Grid>
               </Grid>
             </Box>
